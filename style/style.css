@@ -1,4 +1,12 @@
 * {
     box-sizing: border-box;
     }
-    
+    a:link {
+        color: black !important;
+        text-decoration: none;
+      }
+      a:active {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
+      }

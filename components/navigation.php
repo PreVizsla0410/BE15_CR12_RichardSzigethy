@@ -1,9 +1,9 @@
-<div class="d-flex justify-content-center bg-primary bg-primary">
+<div class="d-flex justify-content-center bg-primary">
   <p class="fs-1 text-dark mt-5"> Mount Everest Travel Agency</p> 
   </div>
 <div class="d-flex justify-content-center bg-info">
 <nav class="navbar navbar-expand-lg">
-<div class="container text-secondary">
+<div class="container text-dark">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,12 +15,10 @@
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="create.php">Add new Locaton</a>
       </li>
-
   </div>
   </div>
 </nav>
 </div>
-
 
 
 
