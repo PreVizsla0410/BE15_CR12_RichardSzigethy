@@ -2,39 +2,3 @@
     box-sizing: border-box;
     }
     
-    body {
-        background-image: url("../pictures/");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-     
-    
-     .bgimg{
-         background: src("\pictures\hero.jpg") no-repeat center ;
-         background-size: cover;
-         height: 80vh;
-         position: relative;
-          text-align: center;
-          color: white;
-        
-     } 
-     .bgimg h1{
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-shadow: 2px 2px  black ;
-        font-size: 5vh;
-     }
-     .btn1{
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-     }
-     
-    
-     .footer{
-         background: transparent;
-     }

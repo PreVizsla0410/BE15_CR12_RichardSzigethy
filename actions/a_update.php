@@ -5,15 +5,15 @@ require_once 'db_connect.php';
 if ($_POST) {    
     $id = $_POST['id'];
     $image = $_POST['image'];
-    $name = $_POST['holidayname'];
+    $name = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
-    $duration = $_POST['length-of-holiday'];
+    $duration = $_POST['duration'];
     $longitude = $_POST["longitude"];
     $latitude = $_POST["latitude"];
  
  
-        $sql = "UPDATE locations SET image = '$image', holidayname = '$name', price = '$price' , description ='$description', length-of-holiday = '$duration', longitude = '$longitude', latitude = '$latitude' 
+        $sql = "UPDATE locations SET image = '$image', name = '$name', price = '$price' , description ='$description', duration = '$duration', longitude = '$longitude', latitude = '$latitude' 
         WHERE id = {$id}";
     if (mysqli_query($connect, $sql) === true) {
         $class = "Success";

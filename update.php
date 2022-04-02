@@ -8,10 +8,10 @@ if ($_GET['id']) {
     if (mysqli_num_rows($result) == 1) {
         $data = mysqli_fetch_assoc($result);
         $image = $data['image'];
-        $name = $data['holidayname'];
+        $name = $data['name'];
         $price = $data['price'];
         $description = $data['description'];
-        $duration = $data['length-of-holiday'];
+        $duration = $data['duration'];
         $longitude = $data["longitude"];
         $latitude = $data["latitude"];
     } else {

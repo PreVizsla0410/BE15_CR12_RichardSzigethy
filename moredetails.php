@@ -1,6 +1,5 @@
 <?php
 require_once 'actions/db_connect.php';
-require_once 'restful.php';
 
 if ($_GET['id']) {
     $id = $_GET['id'];
@@ -9,10 +8,10 @@ if ($_GET['id']) {
     if (mysqli_num_rows($result) == 1) {
         $data = mysqli_fetch_assoc($result);
         $image = $data['image'];
-        $holidayname = $data['holidayname'];
+        $holidayname = $data['name'];
         $price = $data['price'];
         $description = $data['description'];
-        $length = $data['length-of-holiday'];
+        $length = $data['duration'];
         $longitude = $data["longitude"];
         $latitude = $data["latitude"];
     } else {
@@ -44,8 +43,6 @@ if ($_GET['id']) {
             <?php include_once 'components/navigation.php';   ?>
         </header>
         <div class="container text-center w-30">
-        <div class="btn btn-primary fw-bold" id="show">Show Weather</div>
-    <div class='shadow-3 bg-light' id="weather"></div>
            <div class="card h-100 my-4" >
            <img src="pictures/<?php echo $image ?>" class="card-img-top " >
                 <div class="card-body mt-3">
@@ -65,26 +62,6 @@ if ($_GET['id']) {
        <footer>
         <?php include_once 'components/footer.php';?>
     </footer> 
-
-   
-
-    <script>
-        document.getElementById("show").addEventListener("click", loadData);
-        function loadData() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                if (this.status == 200) {
-                     document.getElementById("weather").innerHTML = this.responseText;
-                }
-            }
-            let url = "weather.php?lat=" + <?php echo $latitude ?> + "&long=" + <?php echo $longitude ?>;
-            xhttp.open("GET", url, true);
-            xhttp.send();
-        }  
-    </script> 
-
-
-
 
 
 

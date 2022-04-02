@@ -2,17 +2,17 @@
 require_once 'db_connect.php';
 
 if ($_POST) {   
-    $image = isset($_POST['image']);
-    $name = isset($_POST['holidayname']);
-    $price = isset($_POST['price']);
-    $description = isset($_POST['description']); 
-    $duration = isset($_POST['length-of-holiday']);
-    $longitude = isset($_POST['longitude']);
-    $latitude = isset($_POST["latitude"]);
+    $image = $_POST['image'];
+    $name = $_POST['name'];
+    $price = $_POST['price'];
+    $description = $_POST['description']; 
+    $duration = $_POST['duration'];
+    $longitude = $_POST['longitude'];
+    $latitude = $_POST["latitude"];
 
 
     $sql = 
-    " INSERT INTO locations (image, holidayname, price, description, length-of-holiday, longitude,latitude)
+    " INSERT INTO locations (image, name, price, description, duration, longitude,latitude)
     VALUES ('$image', '$name', '$price', '$description', '$duration','$longitude','$latitude')";
     
 

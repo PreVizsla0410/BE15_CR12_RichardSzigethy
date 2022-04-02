@@ -9,11 +9,11 @@ if(mysqli_num_rows($result)  > 0) {
         $tbody .=   ' 
         <div class="col">
         <div class="card-group h-200  ">
-          <img src="pictures/'.$row['image'].'" class="card-img-top" alt="'.$row['holidayname'].'">
+          <img src="pictures/'.$row['image'].'" class="card-img-top" alt="'.$row['name'].'">
           <div class="card-body bg-transparent text-dark">
-            <h5 class="card-title">'.$row['holidayname'].'</h5>
+            <h5 class="card-title">'.$row['name'].'</h5>
             <p class="card-text">'.$row['description'].'</p>
-            <p class="card-text">Duration: '.$row['length-of-holiday'].'</p>
+            <p class="card-text">Duration: '.$row['duration'].'</p>
             <p class="card-text">Price: '.$row['price'].'€</p>
             <div class="col text-center">
             <a href="update.php?id=' .$row['id'].'"><button class="btn btn-primary" type="button" title="Edit the Product">Edit</button></a>
@@ -61,7 +61,12 @@ mysqli_close($connect);
                 </div>
                 <hr>
         </main>
-      
+      <div class="col text-center m-5">
+
+<button type="button" class="btn btn-warning"><a class="nav-link active" aria-current="page" href="API/displayAll.php">Build an API with our Data! Click here for Access</a></button>
+<hr>
+          <div>
+        
         <footer>
             <?php require_once 'components/footer.php' ?>
         </footer>
